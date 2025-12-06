@@ -1,0 +1,593 @@
+---
+const title = "Elm Lake | Wisconsin Heritage & Innovation";
+const description = "Gateway to Elm Lake Cranberry and Elm Lake Labs - where four generations of Wisconsin heritage meets modern innovation.";
+---
+
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta name="description" content={description} />
+		<title>{title}</title>
+
+		<!-- Fonts - Vintage postcard aesthetic -->
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Lora:ital,wght@0,400;0,600;1,400&family=Source+Sans+3:wght@300;400;600&display=swap" rel="stylesheet">
+	</head>
+	<body>
+		<div class="paper-texture"></div>
+		<div class="stamp-border"></div>
+
+		<a href="/" class="back-link">
+			<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+				<path d="M19 12H5"/>
+				<path d="M12 19l-7-7 7-7"/>
+			</svg>
+			Back
+		</a>
+
+		<main class="postcard">
+			<header class="postcard-header">
+				<div class="postmark">
+					<div class="postmark-circle">
+						<span class="postmark-location">CRANMOOR</span>
+						<span class="postmark-state">WISCONSIN</span>
+						<span class="postmark-date">EST. 1901</span>
+					</div>
+				</div>
+
+				<div class="greetings">
+					<span class="greetings-from">Greetings from</span>
+					<h1>Elm Lake</h1>
+					<p class="greetings-sub">Where Heritage Meets Innovation</p>
+				</div>
+
+				<div class="stamp">
+					<div class="stamp-inner">
+						<span class="stamp-value">WI</span>
+						<span class="stamp-text">Wisconsin</span>
+					</div>
+				</div>
+			</header>
+
+			<section class="attractions">
+				<div class="attraction-card cranberry">
+					<a href="https://elmlakecranberry.com" target="_blank" rel="noopener">
+						<div class="card-frame">
+							<div class="card-image">
+								<img src="/images/ELC/logo.png" alt="Elm Lake Cranberry" />
+							</div>
+							<div class="card-banner">
+								<span>Elm Lake Cranberry</span>
+							</div>
+						</div>
+						<div class="card-caption">
+							<p class="caption-title">The Cranberry Marshes</p>
+							<p class="caption-text">Four generations of cranberry farming excellence. Grower-owners with Ocean Spray since the beginning.</p>
+							<span class="visit-tag">Visit Site →</span>
+						</div>
+					</a>
+				</div>
+
+				<div class="divider">
+					<div class="divider-ornament">✦</div>
+				</div>
+
+				<div class="attraction-card labs">
+					<a href="https://elmlakelabs.com" target="_blank" rel="noopener">
+						<div class="card-frame">
+							<div class="card-image">
+								<img src="/images/ELL/logo.png" alt="Elm Lake Labs" />
+							</div>
+							<div class="card-banner">
+								<span>Elm Lake Labs</span>
+							</div>
+						</div>
+						<div class="card-caption">
+							<p class="caption-title">The Technology Studio</p>
+							<p class="caption-text">Modern software solutions crafted with the same care as our agricultural heritage.</p>
+							<span class="visit-tag">Visit Site →</span>
+						</div>
+					</a>
+				</div>
+			</section>
+
+			<footer class="postcard-footer">
+				<div class="footer-line"></div>
+				<p class="footer-text">A Family Enterprise in the Heart of Wisconsin</p>
+				<div class="footer-coords">
+					<span>44.3°N</span>
+					<span>•</span>
+					<span>90.1°W</span>
+				</div>
+			</footer>
+		</main>
+	</body>
+</html>
+
+<style>
+	:root {
+		--parchment: #F4ECD8;
+		--cream: #FDF8EC;
+		--sepia: #8B7355;
+		--sepia-dark: #5D4E37;
+		--rust: #B85C38;
+		--rust-light: #D4855C;
+		--forest: #3D5A47;
+		--navy: #2C3E50;
+		--ink: #2D2417;
+	}
+
+	* {
+		margin: 0;
+		padding: 0;
+		box-sizing: border-box;
+	}
+
+	html {
+		font-size: 16px;
+	}
+
+	body {
+		font-family: 'Source Sans 3', sans-serif;
+		background: var(--parchment);
+		color: var(--ink);
+		min-height: 100vh;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		padding: 2rem;
+		position: relative;
+	}
+
+	/* Paper texture overlay */
+	.paper-texture {
+		position: fixed;
+		inset: 0;
+		pointer-events: none;
+		z-index: 1000;
+		opacity: 0.03;
+		background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 400 400' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='paper'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.04' numOctaves='5' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23paper)'/%3E%3C/svg%3E");
+	}
+
+	/* Stamp-like border */
+	.stamp-border {
+		position: fixed;
+		inset: 1rem;
+		border: 3px solid var(--sepia);
+		border-radius: 4px;
+		pointer-events: none;
+		z-index: 1;
+		opacity: 0.2;
+	}
+
+	.stamp-border::before {
+		content: '';
+		position: absolute;
+		inset: 4px;
+		border: 1px dashed var(--sepia);
+		border-radius: 2px;
+	}
+
+	.back-link {
+		position: fixed;
+		top: 2rem;
+		left: 2rem;
+		z-index: 100;
+		display: flex;
+		align-items: center;
+		gap: 0.5rem;
+		padding: 0.5rem 1rem;
+		background: var(--cream);
+		border: 2px solid var(--sepia);
+		border-radius: 4px;
+		color: var(--sepia-dark);
+		text-decoration: none;
+		font-size: 0.8rem;
+		font-weight: 600;
+		transition: all 0.3s ease;
+	}
+
+	.back-link:hover {
+		background: var(--sepia);
+		color: var(--cream);
+	}
+
+	.postcard {
+		position: relative;
+		z-index: 2;
+		width: 100%;
+		max-width: 900px;
+		background: var(--cream);
+		border-radius: 8px;
+		padding: 3rem;
+		box-shadow:
+			0 2px 4px rgba(0,0,0,0.1),
+			0 8px 24px rgba(0,0,0,0.1),
+			inset 0 0 80px rgba(139, 115, 85, 0.05);
+		animation: cardDrop 0.8s ease-out;
+	}
+
+	@keyframes cardDrop {
+		from {
+			opacity: 0;
+			transform: translateY(-30px) rotate(-2deg);
+		}
+		to {
+			opacity: 1;
+			transform: translateY(0) rotate(0);
+		}
+	}
+
+	/* Header */
+	.postcard-header {
+		display: flex;
+		justify-content: space-between;
+		align-items: flex-start;
+		margin-bottom: 3rem;
+		padding-bottom: 2rem;
+		border-bottom: 2px dashed var(--sepia);
+		opacity: 0.9;
+	}
+
+	.postmark {
+		animation: stampIn 0.6s ease-out 0.3s backwards;
+	}
+
+	@keyframes stampIn {
+		from {
+			opacity: 0;
+			transform: scale(1.5) rotate(-15deg);
+		}
+		to {
+			opacity: 1;
+			transform: scale(1) rotate(-8deg);
+		}
+	}
+
+	.postmark-circle {
+		width: 90px;
+		height: 90px;
+		border: 3px solid var(--rust);
+		border-radius: 50%;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		transform: rotate(-8deg);
+		position: relative;
+	}
+
+	.postmark-circle::before,
+	.postmark-circle::after {
+		content: '';
+		position: absolute;
+		left: 50%;
+		transform: translateX(-50%);
+		width: 110%;
+		height: 2px;
+		background: var(--rust);
+	}
+
+	.postmark-circle::before { top: 25%; }
+	.postmark-circle::after { bottom: 25%; }
+
+	.postmark-location {
+		font-size: 0.55rem;
+		font-weight: 600;
+		letter-spacing: 0.15em;
+		color: var(--rust);
+	}
+
+	.postmark-state {
+		font-size: 0.7rem;
+		font-weight: 600;
+		letter-spacing: 0.1em;
+		color: var(--rust);
+	}
+
+	.postmark-date {
+		font-size: 0.5rem;
+		color: var(--rust);
+		margin-top: 2px;
+	}
+
+	.greetings {
+		text-align: center;
+		flex: 1;
+		padding: 0 2rem;
+		animation: fadeIn 0.8s ease-out 0.4s backwards;
+	}
+
+	.greetings-from {
+		font-family: 'Lora', serif;
+		font-style: italic;
+		font-size: 1rem;
+		color: var(--sepia);
+		display: block;
+		margin-bottom: 0.25rem;
+	}
+
+	.greetings h1 {
+		font-family: 'Abril Fatface', serif;
+		font-size: clamp(3rem, 8vw, 5rem);
+		font-weight: 400;
+		color: var(--rust);
+		line-height: 1;
+		margin-bottom: 0.5rem;
+		text-shadow: 2px 2px 0 rgba(184, 92, 56, 0.1);
+	}
+
+	.greetings-sub {
+		font-family: 'Lora', serif;
+		font-size: 0.9rem;
+		color: var(--sepia);
+		letter-spacing: 0.1em;
+	}
+
+	.stamp {
+		animation: stampIn 0.6s ease-out 0.5s backwards;
+	}
+
+	.stamp-inner {
+		width: 70px;
+		height: 90px;
+		background: linear-gradient(135deg, var(--forest) 0%, var(--navy) 100%);
+		border: 3px solid var(--cream);
+		outline: 2px solid var(--sepia);
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		transform: rotate(5deg);
+	}
+
+	.stamp-value {
+		font-family: 'Abril Fatface', serif;
+		font-size: 1.75rem;
+		color: var(--cream);
+	}
+
+	.stamp-text {
+		font-size: 0.5rem;
+		letter-spacing: 0.1em;
+		text-transform: uppercase;
+		color: var(--cream);
+		opacity: 0.8;
+	}
+
+	/* Attractions */
+	.attractions {
+		display: grid;
+		grid-template-columns: 1fr auto 1fr;
+		gap: 2rem;
+		align-items: start;
+	}
+
+	.attraction-card {
+		animation: slideUp 0.8s ease-out backwards;
+	}
+
+	.attraction-card.cranberry { animation-delay: 0.6s; }
+	.attraction-card.labs { animation-delay: 0.8s; }
+
+	.attraction-card a {
+		text-decoration: none;
+		color: inherit;
+		display: block;
+	}
+
+	.card-frame {
+		position: relative;
+		background: var(--parchment);
+		padding: 0.75rem;
+		border: 2px solid var(--sepia);
+		margin-bottom: 1rem;
+		transition: transform 0.4s ease;
+	}
+
+	.attraction-card:hover .card-frame {
+		transform: rotate(-2deg) scale(1.02);
+	}
+
+	.card-image {
+		aspect-ratio: 4/3;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		position: relative;
+		overflow: hidden;
+	}
+
+	.cranberry .card-image {
+		background: linear-gradient(135deg, var(--rust) 0%, var(--rust-light) 100%);
+	}
+
+	.labs .card-image {
+		background: linear-gradient(135deg, var(--navy) 0%, var(--forest) 100%);
+	}
+
+	.card-image img {
+		width: 45%;
+		max-width: 120px;
+		height: auto;
+		filter: brightness(0) invert(1);
+		opacity: 0.9;
+	}
+
+	.card-banner {
+		position: absolute;
+		bottom: -1rem;
+		left: 50%;
+		transform: translateX(-50%);
+		background: var(--cream);
+		padding: 0.4rem 1rem;
+		border: 2px solid var(--sepia);
+		white-space: nowrap;
+	}
+
+	.card-banner span {
+		font-family: 'Lora', serif;
+		font-size: 0.75rem;
+		font-weight: 600;
+		color: var(--sepia-dark);
+		letter-spacing: 0.05em;
+	}
+
+	.card-caption {
+		padding-top: 1rem;
+	}
+
+	.caption-title {
+		font-family: 'Abril Fatface', serif;
+		font-size: 1.1rem;
+		margin-bottom: 0.5rem;
+	}
+
+	.cranberry .caption-title { color: var(--rust); }
+	.labs .caption-title { color: var(--navy); }
+
+	.caption-text {
+		font-size: 0.85rem;
+		line-height: 1.6;
+		color: var(--sepia);
+		margin-bottom: 0.75rem;
+	}
+
+	.visit-tag {
+		font-size: 0.75rem;
+		font-weight: 600;
+		letter-spacing: 0.05em;
+		text-transform: uppercase;
+		transition: letter-spacing 0.3s ease;
+	}
+
+	.cranberry .visit-tag { color: var(--rust); }
+	.labs .visit-tag { color: var(--navy); }
+
+	.attraction-card:hover .visit-tag {
+		letter-spacing: 0.15em;
+	}
+
+	/* Divider */
+	.divider {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		padding: 2rem 0;
+		animation: fadeIn 0.8s ease-out 0.7s backwards;
+	}
+
+	.divider-ornament {
+		font-size: 1.5rem;
+		color: var(--sepia);
+		animation: spin 20s linear infinite;
+	}
+
+	@keyframes spin {
+		to { transform: rotate(360deg); }
+	}
+
+	/* Footer */
+	.postcard-footer {
+		margin-top: 3rem;
+		padding-top: 2rem;
+		border-top: 2px dashed var(--sepia);
+		text-align: center;
+		animation: fadeIn 0.8s ease-out 0.9s backwards;
+	}
+
+	.footer-line {
+		width: 60px;
+		height: 2px;
+		background: var(--rust);
+		margin: 0 auto 1rem;
+	}
+
+	.footer-text {
+		font-family: 'Lora', serif;
+		font-style: italic;
+		font-size: 0.9rem;
+		color: var(--sepia);
+		margin-bottom: 0.5rem;
+	}
+
+	.footer-coords {
+		display: flex;
+		justify-content: center;
+		gap: 0.5rem;
+		font-size: 0.7rem;
+		letter-spacing: 0.1em;
+		color: var(--sepia);
+		opacity: 0.7;
+	}
+
+	/* Animations */
+	@keyframes fadeIn {
+		from { opacity: 0; }
+		to { opacity: 1; }
+	}
+
+	@keyframes slideUp {
+		from {
+			opacity: 0;
+			transform: translateY(30px);
+		}
+		to {
+			opacity: 1;
+			transform: translateY(0);
+		}
+	}
+
+	/* Mobile */
+	@media (max-width: 768px) {
+		body {
+			padding: 1rem;
+			align-items: flex-start;
+			padding-top: 4rem;
+		}
+
+		.postcard {
+			padding: 1.5rem;
+		}
+
+		.postcard-header {
+			flex-direction: column;
+			align-items: center;
+			gap: 1.5rem;
+		}
+
+		.postmark {
+			order: 2;
+		}
+
+		.greetings {
+			order: 1;
+			padding: 0;
+		}
+
+		.stamp {
+			display: none;
+		}
+
+		.attractions {
+			grid-template-columns: 1fr;
+			gap: 2rem;
+		}
+
+		.divider {
+			padding: 1rem 0;
+		}
+
+		.back-link {
+			top: 1rem;
+			left: 1rem;
+		}
+
+		.stamp-border {
+			inset: 0.5rem;
+		}
+	}
+</style>

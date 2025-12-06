@@ -1,0 +1,545 @@
+---
+const title = "Elm Lake | Wisconsin Heritage & Innovation";
+const description = "Gateway to Elm Lake Cranberry and Elm Lake Labs - where four generations of Wisconsin heritage meets modern innovation.";
+---
+
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta name="description" content={description} />
+		<title>{title}</title>
+
+		<!-- Fonts - Bold brutalist typography -->
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+	</head>
+	<body>
+		<div class="grid-overlay"></div>
+
+		<a href="/" class="back-link">[← BACK]</a>
+
+		<header class="top-bar">
+			<span class="location">CRANMOOR, WI</span>
+			<span class="coords">44.3°N / 90.1°W</span>
+			<span class="year">© 1901—2024</span>
+		</header>
+
+		<main>
+			<section class="hero">
+				<div class="hero-text">
+					<div class="title-row">
+						<span class="title-word">ELM</span>
+						<span class="title-word outline">LAKE</span>
+					</div>
+					<div class="title-subrow">
+						<span class="dash">—</span>
+						<span class="subtitle">WISCONSIN</span>
+						<span class="dash">—</span>
+					</div>
+				</div>
+
+				<div class="hero-tagline">
+					<p>WHERE FOUR GENERATIONS OF</p>
+					<p class="highlight">HERITAGE</p>
+					<p>MEETS MODERN</p>
+					<p class="highlight">INNOVATION</p>
+				</div>
+			</section>
+
+			<section class="ventures">
+				<div class="section-label">
+					<span class="label-number">01</span>
+					<span class="label-line"></span>
+					<span class="label-text">VENTURES</span>
+				</div>
+
+				<div class="venture-blocks">
+					<a href="https://elmlakecranberry.com" class="venture-block cranberry" target="_blank" rel="noopener">
+						<div class="block-header">
+							<span class="block-tag">AGRICULTURE</span>
+							<span class="block-arrow">↗</span>
+						</div>
+						<div class="block-logo">
+							<img src="/images/ELC/logo-white.png" alt="Elm Lake Cranberry" />
+						</div>
+						<div class="block-content">
+							<h2>ELM LAKE<br/>CRANBERRY</h2>
+							<div class="block-meta">
+								<span>EST. 1901</span>
+								<span>•</span>
+								<span>OCEAN SPRAY</span>
+							</div>
+						</div>
+						<p class="block-desc">Four generations of cranberry farming in Wisconsin's pristine marshlands.</p>
+						<div class="block-footer">
+							<span class="cta">[VISIT_SITE]</span>
+						</div>
+					</a>
+
+					<a href="https://elmlakelabs.com" class="venture-block labs" target="_blank" rel="noopener">
+						<div class="block-header">
+							<span class="block-tag">TECHNOLOGY</span>
+							<span class="block-arrow">↗</span>
+						</div>
+						<div class="block-logo">
+							<img src="/images/ELL/logo-white.png" alt="Elm Lake Labs" />
+						</div>
+						<div class="block-content">
+							<h2>ELM LAKE<br/>LABS</h2>
+							<div class="block-meta">
+								<span>STUDIO</span>
+								<span>•</span>
+								<span>SOFTWARE</span>
+							</div>
+						</div>
+						<p class="block-desc">Modern software solutions with the same care and craftsmanship.</p>
+						<div class="block-footer">
+							<span class="cta">[VISIT_SITE]</span>
+						</div>
+					</a>
+				</div>
+			</section>
+
+			<footer>
+				<div class="footer-grid">
+					<div class="footer-col">
+						<span class="footer-label">LOCATION</span>
+						<span class="footer-value">CRANMOOR, WI</span>
+					</div>
+					<div class="footer-col">
+						<span class="footer-label">SINCE</span>
+						<span class="footer-value">1901</span>
+					</div>
+					<div class="footer-col">
+						<span class="footer-label">TYPE</span>
+						<span class="footer-value">FAMILY ENTERPRISE</span>
+					</div>
+				</div>
+				<div class="footer-bottom">
+					<span>////////</span>
+					<span>ELM LAKE</span>
+					<span>////////</span>
+				</div>
+			</footer>
+		</main>
+	</body>
+</html>
+
+<style>
+	:root {
+		--black: #0A0A0A;
+		--white: #FAFAFA;
+		--gray: #666666;
+		--cranberry: #C41E3A;
+		--electric: #00FF88;
+		--yellow: #FFE600;
+	}
+
+	* {
+		margin: 0;
+		padding: 0;
+		box-sizing: border-box;
+	}
+
+	html {
+		font-size: 16px;
+	}
+
+	body {
+		font-family: 'IBM Plex Mono', monospace;
+		background: var(--black);
+		color: var(--white);
+		min-height: 100vh;
+		overflow-x: hidden;
+		position: relative;
+	}
+
+	/* Grid overlay */
+	.grid-overlay {
+		position: fixed;
+		inset: 0;
+		pointer-events: none;
+		z-index: 0;
+		background-image:
+			linear-gradient(rgba(255,255,255,0.02) 1px, transparent 1px),
+			linear-gradient(90deg, rgba(255,255,255,0.02) 1px, transparent 1px);
+		background-size: 40px 40px;
+	}
+
+	.back-link {
+		position: fixed;
+		top: 1rem;
+		left: 1rem;
+		z-index: 100;
+		color: var(--white);
+		text-decoration: none;
+		font-size: 0.7rem;
+		font-weight: 500;
+		letter-spacing: 0.05em;
+		padding: 0.5rem;
+		border: 1px solid var(--gray);
+		transition: all 0.2s ease;
+	}
+
+	.back-link:hover {
+		background: var(--white);
+		color: var(--black);
+		border-color: var(--white);
+	}
+
+	/* Top Bar */
+	.top-bar {
+		position: fixed;
+		top: 0;
+		left: 0;
+		right: 0;
+		z-index: 50;
+		display: flex;
+		justify-content: space-between;
+		padding: 1rem 2rem;
+		border-bottom: 1px solid rgba(255,255,255,0.1);
+		font-size: 0.65rem;
+		letter-spacing: 0.1em;
+		color: var(--gray);
+	}
+
+	main {
+		position: relative;
+		z-index: 1;
+		max-width: 1400px;
+		margin: 0 auto;
+		padding: 6rem 2rem 2rem;
+	}
+
+	/* Hero */
+	.hero {
+		padding: 4rem 0;
+		border-bottom: 1px solid rgba(255,255,255,0.1);
+		margin-bottom: 4rem;
+	}
+
+	.hero-text {
+		margin-bottom: 3rem;
+	}
+
+	.title-row {
+		display: flex;
+		align-items: baseline;
+		gap: 2rem;
+		animation: slideIn 0.8s ease-out;
+	}
+
+	@keyframes slideIn {
+		from {
+			opacity: 0;
+			transform: translateX(-60px);
+		}
+		to {
+			opacity: 1;
+			transform: translateX(0);
+		}
+	}
+
+	.title-word {
+		font-family: 'Bebas Neue', sans-serif;
+		font-size: clamp(6rem, 20vw, 16rem);
+		line-height: 0.85;
+		letter-spacing: -0.02em;
+	}
+
+	.title-word.outline {
+		-webkit-text-stroke: 2px var(--white);
+		-webkit-text-fill-color: transparent;
+	}
+
+	.title-subrow {
+		display: flex;
+		align-items: center;
+		gap: 1.5rem;
+		margin-top: 1rem;
+		animation: slideIn 0.8s ease-out 0.1s backwards;
+	}
+
+	.dash {
+		color: var(--cranberry);
+		font-size: 1.5rem;
+	}
+
+	.subtitle {
+		font-size: 0.9rem;
+		letter-spacing: 0.4em;
+		color: var(--gray);
+	}
+
+	.hero-tagline {
+		font-size: clamp(0.8rem, 2vw, 1.1rem);
+		line-height: 1.8;
+		letter-spacing: 0.15em;
+		color: var(--gray);
+		animation: fadeIn 0.8s ease-out 0.3s backwards;
+	}
+
+	.hero-tagline .highlight {
+		color: var(--electric);
+		font-weight: 600;
+	}
+
+	/* Section Label */
+	.section-label {
+		display: flex;
+		align-items: center;
+		gap: 1rem;
+		margin-bottom: 2rem;
+		animation: fadeIn 0.8s ease-out 0.4s backwards;
+	}
+
+	.label-number {
+		font-size: 0.7rem;
+		color: var(--cranberry);
+		font-weight: 600;
+	}
+
+	.label-line {
+		flex: 1;
+		max-width: 100px;
+		height: 1px;
+		background: linear-gradient(90deg, var(--cranberry), transparent);
+	}
+
+	.label-text {
+		font-size: 0.7rem;
+		letter-spacing: 0.2em;
+		color: var(--gray);
+	}
+
+	/* Venture Blocks */
+	.venture-blocks {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		gap: 1rem;
+	}
+
+	.venture-block {
+		display: flex;
+		flex-direction: column;
+		padding: 2rem;
+		text-decoration: none;
+		color: inherit;
+		border: 1px solid rgba(255,255,255,0.1);
+		transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+		animation: blockIn 0.8s ease-out backwards;
+		position: relative;
+		overflow: hidden;
+	}
+
+	.venture-block::before {
+		content: '';
+		position: absolute;
+		inset: 0;
+		opacity: 0;
+		transition: opacity 0.4s ease;
+	}
+
+	.cranberry {
+		animation-delay: 0.5s;
+	}
+
+	.cranberry::before {
+		background: linear-gradient(135deg, var(--cranberry) 0%, rgba(196, 30, 58, 0.3) 100%);
+	}
+
+	.labs {
+		animation-delay: 0.6s;
+	}
+
+	.labs::before {
+		background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+	}
+
+	.venture-block:hover::before {
+		opacity: 1;
+	}
+
+	.venture-block:hover {
+		border-color: var(--white);
+		transform: translateY(-4px);
+	}
+
+	@keyframes blockIn {
+		from {
+			opacity: 0;
+			transform: translateY(40px);
+		}
+		to {
+			opacity: 1;
+			transform: translateY(0);
+		}
+	}
+
+	.block-header {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		margin-bottom: 2rem;
+		position: relative;
+		z-index: 2;
+	}
+
+	.block-tag {
+		font-size: 0.6rem;
+		letter-spacing: 0.2em;
+		padding: 0.3rem 0.6rem;
+		border: 1px solid currentColor;
+	}
+
+	.cranberry .block-tag { color: var(--cranberry); border-color: var(--cranberry); }
+	.labs .block-tag { color: var(--electric); border-color: var(--electric); }
+
+	.block-arrow {
+		font-size: 1.5rem;
+		transition: transform 0.3s ease;
+	}
+
+	.venture-block:hover .block-arrow {
+		transform: translate(4px, -4px);
+	}
+
+	.block-logo {
+		margin-bottom: 2rem;
+		position: relative;
+		z-index: 2;
+	}
+
+	.block-logo img {
+		width: 80px;
+		height: auto;
+		opacity: 0.9;
+	}
+
+	.block-content {
+		margin-bottom: 1.5rem;
+		position: relative;
+		z-index: 2;
+	}
+
+	.block-content h2 {
+		font-family: 'Bebas Neue', sans-serif;
+		font-size: clamp(2rem, 4vw, 3rem);
+		line-height: 1;
+		letter-spacing: 0.02em;
+		margin-bottom: 0.75rem;
+	}
+
+	.block-meta {
+		display: flex;
+		gap: 0.75rem;
+		font-size: 0.6rem;
+		letter-spacing: 0.1em;
+		color: var(--gray);
+	}
+
+	.block-desc {
+		font-size: 0.8rem;
+		line-height: 1.7;
+		color: var(--gray);
+		margin-bottom: 2rem;
+		position: relative;
+		z-index: 2;
+	}
+
+	.block-footer {
+		margin-top: auto;
+		position: relative;
+		z-index: 2;
+	}
+
+	.cta {
+		font-size: 0.7rem;
+		letter-spacing: 0.1em;
+		transition: color 0.3s ease;
+	}
+
+	.venture-block:hover .cta {
+		color: var(--yellow);
+	}
+
+	/* Footer */
+	footer {
+		margin-top: 4rem;
+		padding-top: 2rem;
+		border-top: 1px solid rgba(255,255,255,0.1);
+		animation: fadeIn 0.8s ease-out 0.7s backwards;
+	}
+
+	.footer-grid {
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		gap: 2rem;
+		margin-bottom: 2rem;
+	}
+
+	.footer-col {
+		display: flex;
+		flex-direction: column;
+		gap: 0.25rem;
+	}
+
+	.footer-label {
+		font-size: 0.55rem;
+		letter-spacing: 0.2em;
+		color: var(--gray);
+	}
+
+	.footer-value {
+		font-size: 0.75rem;
+		letter-spacing: 0.05em;
+	}
+
+	.footer-bottom {
+		display: flex;
+		justify-content: center;
+		gap: 1.5rem;
+		font-size: 0.7rem;
+		letter-spacing: 0.15em;
+		color: var(--gray);
+	}
+
+	/* Animations */
+	@keyframes fadeIn {
+		from { opacity: 0; }
+		to { opacity: 1; }
+	}
+
+	/* Mobile */
+	@media (max-width: 768px) {
+		.top-bar {
+			display: none;
+		}
+
+		main {
+			padding: 4rem 1rem 2rem;
+		}
+
+		.title-row {
+			flex-direction: column;
+			gap: 0;
+		}
+
+		.venture-blocks {
+			grid-template-columns: 1fr;
+		}
+
+		.footer-grid {
+			grid-template-columns: 1fr;
+			gap: 1rem;
+		}
+
+		.back-link {
+			top: 0.5rem;
+			left: 0.5rem;
+		}
+	}
+</style>
