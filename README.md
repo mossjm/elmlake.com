@@ -61,7 +61,7 @@ npm run preview
 ## Related Repositories
 
 - [elmlakecranberry.com](https://github.com/mossjm/elmlakecranberry.com) — Elm Lake Cranberry website
-- elmlakelabs.com — Elm Lake Labs website (if/when created)
+- elmlakelabs.com — Elm Lake Labs website
 
 ## Deployment
 
