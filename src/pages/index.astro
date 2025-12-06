@@ -40,7 +40,7 @@ const description = "Gateway to Elm Lake Cranberry and Elm Lake Labs - where fou
 					<a href="https://elmlakecranberry.com" class="venture-card cranberry" target="_blank" rel="noopener">
 						<div class="card-inner">
 							<div class="card-logo">
-								<img src="/images/elm-lake-cranberry-logo.png" alt="Elm Lake Cranberry logo" />
+								<img src="/images/ELC/logo-white.png" alt="Elm Lake Cranberry logo" />
 							</div>
 							<div class="card-content">
 								<h2>Elm Lake Cranberry</h2>
@@ -64,9 +64,7 @@ const description = "Gateway to Elm Lake Cranberry and Elm Lake Labs - where fou
 					<a href="https://elmlakelabs.com" class="venture-card labs" target="_blank" rel="noopener">
 						<div class="card-inner">
 							<div class="card-logo">
-								<div class="labs-logo">
-									<span class="labs-icon">◈</span>
-								</div>
+								<img src="/images/ELL/logo-white.png" alt="Elm Lake Labs logo" />
 							</div>
 							<div class="card-content">
 								<h2>Elm Lake Labs</h2>
@@ -285,7 +283,6 @@ const description = "Gateway to Elm Lake Cranberry and Elm Lake Labs - where fou
 	.cranberry .card-logo img {
 		width: 140px;
 		height: auto;
-		filter: brightness(0) invert(1);
 		opacity: 0.95;
 		transition: transform 0.4s ease;
 	}
@@ -303,26 +300,15 @@ const description = "Gateway to Elm Lake Cranberry and Elm Lake Labs - where fou
 		color: var(--color-cream);
 	}
 
-	.labs-logo {
-		width: 80px;
-		height: 80px;
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		background: rgba(255, 255, 255, 0.1);
-		border-radius: 12px;
-		border: 1px solid rgba(255, 255, 255, 0.15);
-		transition: all 0.4s ease;
+	.labs .card-logo img {
+		width: 140px;
+		height: auto;
+		opacity: 0.95;
+		transition: transform 0.4s ease;
 	}
 
-	.labs:hover .labs-logo {
-		background: rgba(255, 255, 255, 0.15);
+	.labs:hover .card-logo img {
 		transform: scale(1.05);
-	}
-
-	.labs-icon {
-		font-size: 2rem;
-		opacity: 0.9;
 	}
 
 	/* Card Content */
@@ -447,17 +433,9 @@ const description = "Gateway to Elm Lake Cranberry and Elm Lake Labs - where fou
 			padding: var(--space-md) var(--space-sm);
 		}
 
-		.cranberry .card-logo img {
+		.cranberry .card-logo img,
+		.labs .card-logo img {
 			width: 100px;
-		}
-
-		.labs-logo {
-			width: 60px;
-			height: 60px;
-		}
-
-		.labs-icon {
-			font-size: 1.5rem;
 		}
 	}
 </style>
