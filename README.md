@@ -65,4 +65,8 @@ npm run preview
 
 ## Deployment
 
-The site is static and can be deployed to any static hosting provider (Netlify, Vercel, Cloudflare Pages, etc.). The build output goes to `./dist/`.
+Hosted on **Cloudflare Pages**.
+
+- Build command: `npm run build`
+- Output directory: `dist`
+- Domain: elmlake.com (managed via Name.com)
