@@ -345,8 +345,20 @@ const description = "Gateway to Elm Lake Cranberry and Elm Lake Labs - where fou
 
 	/* Mobile */
 	@media (max-width: 768px) {
+		html, body {
+			height: auto;
+			overflow: auto;
+		}
+
 		.split-container {
 			flex-direction: column;
+			height: auto;
+			min-height: 100vh;
+		}
+
+		.panel {
+			min-height: 50vh;
+			padding: 3rem 0;
 		}
 
 		.center-brand {
@@ -362,7 +374,12 @@ const description = "Gateway to Elm Lake Cranberry and Elm Lake Labs - where fou
 		}
 
 		.hover-reveal {
-			bottom: 2rem;
+			display: none;
+		}
+
+		footer {
+			position: relative;
+			background: var(--midnight);
 		}
 	}
 </style>
